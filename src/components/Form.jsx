@@ -30,7 +30,11 @@ function Form(props) {
         value={name}
         onChange={handleChange}
       />
-      <button type="submit" className="btn btn__primary btn__lg" disabled={!name}>
+      <button
+        type="submit"
+        className="btn btn__primary btn__lg"
+        disabled={!name}
+      >
         Add
       </button>
     </form>
