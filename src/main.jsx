@@ -4,9 +4,10 @@ import './index.css'
 import App from './App.jsx'
 
 const DATA = [
-  { id: "todo-0", name: "Eat", completed: true },
-  { id: "todo-1", name: "Sleep", completed: false },
-  { id: "todo-2", name: "Repeat", completed: false },
+  { id: "todo-0", name: "Eat", completed: true, due: "Today" },
+  { id: "todo-1", name: "Sleep", completed: false, due: "Tonight" },
+  { id: "todo-2", name: "Repeat", completed: false, due: "Tomorrow" },
+  { id: "todo-3", name: "Learn React", completed: false, due: "This Week" },
 ];
 
 createRoot(document.getElementById('root')).render(
