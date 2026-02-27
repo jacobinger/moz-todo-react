@@ -9,6 +9,7 @@ function Form(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
+    if (!name.trim()) return;
     props.addTask(name);
     setName("");
   }
@@ -29,7 +30,7 @@ function Form(props) {
         value={name}
         onChange={handleChange}
       />
-      <button type="submit" className="btn btn__primary btn__lg">
+      <button type="submit" className="btn btn__primary btn__lg" disabled={!name}>
         Add
       </button>
     </form>
