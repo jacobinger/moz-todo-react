@@ -34,7 +34,7 @@ function App(props) {
   }, [tasks.length, prevTaskLength]);
 
   function addTask(name) {
-    const newTask = { id: `todo-${nanoid()}`, name, completed: false };
+    const newTask = { id: `todo-${nanoid()}`, name, completed: false, due: "" };
     setTasks([...tasks, newTask]);
   }
 
@@ -70,6 +70,7 @@ function App(props) {
         id={task.id}
         name={task.name}
         completed={task.completed}
+        due={task.due}
         key={task.id}
         toggleTaskCompleted={toggleTaskCompleted}
         deleteTask={deleteTask}
@@ -100,7 +101,8 @@ function App(props) {
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
-        aria-labelledby="list-heading">
+        aria-labelledby="list-heading"
+      >
         {taskList}
       </ul>
     </div>
